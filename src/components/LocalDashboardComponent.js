@@ -68,6 +68,16 @@ class LocalDashboard extends Component{
                                 </div>
                                 </div>
                             </div>
+                            <div class="col-lg-3 col-12">
+                                <div class="card" >
+                                <img class="card-img-top" src={imageUrl3} alt="Card image cap" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Book Ambulance</h5>
+                                    <p class="card-text">Emergency Services!</p>
+                                    <a onClick={() => {this.props.clickit('/book_ambulance')}} style={{color: 'white',cursor:'pointer'}} class="btn btn-primary">Book Here</a>
+                                </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -49,6 +49,7 @@ import Patient from './Patient';
 import ViewPatientsPrescription from './ViewPatientsPrescriptionComponent';
 import Prescription from './Prescription';
 import { PageItem } from 'react-bootstrap';
+import BookAmbulance from './BookAmbulance';
 
 const mapStateToProps = (state,{history}) => {
     return{
@@ -191,6 +192,7 @@ class Main extends Component{
                                     <Route path="/view_custom_map" component={() => <ViewCustomMaps clickit={(loc) => this.pusher(loc)} />} />
                                     <Route path="/create_alert" component={() => <CreateAlert clickit={(loc) => this.pusher(loc)} />} />
                                     <Route path="/my_prescriptions" component={() => <MyPrescriptions clickit={(loc) => this.pusher(loc)} />} />
+                                    <Route path="/book_ambulance" component={()=><BookAmbulance clickit={(loc)=>this.pusher(loc)}></BookAmbulance>}></Route>
                                     <Route path="/map_with_id/:mapid" component={ViewCustomMapWithIdMid} />
                                     <Redirect to="/localdashboard" />
                                 </Switch>
