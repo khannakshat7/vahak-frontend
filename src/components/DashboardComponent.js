@@ -111,6 +111,8 @@ class Dashboard extends Component{
                                 </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="row">
                             <div class="col-lg-3 col-12">
                                 <div class="card" >
                                 <img class="card-img-top" src={imageUrl2} alt="Card image cap" />
@@ -121,6 +123,16 @@ class Dashboard extends Component{
                                 </div>
                                 </div>
                             </div>
+                            <div class="col-lg-3 col-12">
+                                <div class="card" >
+                                <img class="card-img-top" src={imageUrl5} alt="Card image cap" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Add prescription</h5>
+                                    <p class="card-text">Give prescription for a patient</p>
+                                    <a onClick={() => {this.props.clickit('/view_patients_prescription')}} style={{color: 'white',cursor:'pointer'}} class="btn btn-primary">Prescribe</a>
+                                </div>
+                                </div>
+                            </div>                           
                         </div>
                     </div>
                 </section>

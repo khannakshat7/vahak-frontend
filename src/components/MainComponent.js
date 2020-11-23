@@ -35,6 +35,7 @@ import Login from './LoginComponent';
 import ErrorHandle from './ErrorComponent';
 import ForgotPassword from './ForgotPasswordComponent';
 import ResetPassword from './ResetPasswordComponent';
+import MyPrescriptions from './DisplayPrescriptionComponent';
 import { fillstore, emptystore } from '../redux/ActionCreators';
 
 // extra stuff
@@ -45,6 +46,8 @@ import Demo from './DemoComponent';
 import AddCustomMap from './AddCustomMap';
 import ViewPatients from './ViewPatients';
 import Patient from './Patient';
+import ViewPatientsPrescription from './ViewPatientsPrescriptionComponent';
+import Prescription from './Prescription';
 import { PageItem } from 'react-bootstrap';
 
 const mapStateToProps = (state,{history}) => {
@@ -75,7 +78,6 @@ class Main extends Component{
     componentWillMount(){
     
         if(localStorage.getItem('token') && this.props.store.name==''){
-            //alert("if inside componentWillMount Entered");
             this.setState({
                 hidden: false
             });
@@ -133,6 +135,9 @@ class Main extends Component{
                 const PatientWithId=(props)=>{
                     return (<Patient match={props.match.params.id} clickit={(loc) => this.pusher(loc)}></Patient>)
                 }
+                const PrescriptionWithId=(props)=>{
+                    return (<Prescription match={props.match.params.id} clickit={(loc) => this.pusher(loc)}></Prescription>)
+                }
                 return(
                     <div className="hold-transition sidebar-mini layout-fixed">
                         <div class="wrapper">
@@ -155,6 +160,8 @@ class Main extends Component{
                                 <Route path="/custom_maps" component={() => <DisplayCustomMaps clickit={(loc) => this.pusher(loc)} />} />
                                 <Route path="/view_patients" component={()=><ViewPatients clickit={(loc) => this.pusher(loc)}></ViewPatients>}></Route>
                                 <Route path='/patient/:id' component={PatientWithId}></Route>
+                                <Route path="/view_patients_prescription" component={()=><ViewPatientsPrescription clickit={(loc) => this.pusher(loc)}></ViewPatientsPrescription>}></Route>
+                                <Route path='/prescription/:id' component={PrescriptionWithId}></Route>
                                 <Route path="/map_with_id/:mapid" component={ViewCustomMapWithIdMid} />
                                 <Redirect to="/dashboard" />
                             </Switch>
@@ -183,6 +190,7 @@ class Main extends Component{
                                     <Route path="/upload_report" component={()=><UploadReports clickit={(loc) => this.pusher(loc)}></UploadReports>}></Route>
                                     <Route path="/view_custom_map" component={() => <ViewCustomMaps clickit={(loc) => this.pusher(loc)} />} />
                                     <Route path="/create_alert" component={() => <CreateAlert clickit={(loc) => this.pusher(loc)} />} />
+                                    <Route path="/my_prescriptions" component={() => <MyPrescriptions clickit={(loc) => this.pusher(loc)} />} />
                                     <Route path="/map_with_id/:mapid" component={ViewCustomMapWithIdMid} />
                                     <Redirect to="/localdashboard" />
                                 </Switch>
