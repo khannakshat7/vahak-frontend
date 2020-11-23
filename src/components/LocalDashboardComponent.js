@@ -48,6 +48,16 @@ class LocalDashboard extends Component{
                                 </div>
                                 </div>
                             </div>
+                            <div class="col-lg-3 col-12">
+                                <div class="card" >
+                                <img class="card-img-top" src={imageUrl3} alt="Card image cap" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Upload Report</h5>
+                                    <p class="card-text">Upload all your Reports Here!</p>
+                                    <a onClick={() => {this.props.clickit('/upload_report')}} style={{color: 'white',cursor:'pointer'}} class="btn btn-primary">Upload Report</a>
+                                </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

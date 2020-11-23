@@ -111,6 +111,16 @@ class Dashboard extends Component{
                                 </div>
                                 </div>
                             </div>
+                            <div class="col-lg-3 col-12">
+                                <div class="card" >
+                                <img class="card-img-top" src={imageUrl2} alt="Card image cap" />
+                                <div class="card-body">
+                                    <h5 class="card-title">View Patients</h5>
+                                    <p class="card-text">View All Patients Here</p>
+                                    <a onClick={() => {this.props.clickit('/view_patients')}} style={{color: 'white',cursor:'pointer'}} class="btn btn-primary">View Patients</a>
+                                </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -26,6 +26,7 @@ import DisplayCustomMaps from './DisplayCustomMapsComponent';
 // for local user :
 import LocalHeader from './LocalHeaderComponent';
 import LocalDashboard from './LocalDashboardComponent';
+import UploadReports from './UploadReports'
 
 // for non-login user
 import Welcome from './WelcomeComponent';
@@ -42,6 +43,9 @@ import { baseUrl } from '../baseUrl';
 import { Loading } from './LoadingComponent';
 import Demo from './DemoComponent';
 import AddCustomMap from './AddCustomMap';
+import ViewPatients from './ViewPatients';
+import Patient from './Patient';
+import { PageItem } from 'react-bootstrap';
 
 const mapStateToProps = (state,{history}) => {
     return{
@@ -126,6 +130,9 @@ class Main extends Component{
                         <LocationCustomMapWithId match={props.match.params.mapid} clickit={(loc) => this.pusher(loc)} />
                     );
                 }
+                const PatientWithId=(props)=>{
+                    return (<Patient match={props.match.params.id} clickit={(loc) => this.pusher(loc)}></Patient>)
+                }
                 return(
                     <div className="hold-transition sidebar-mini layout-fixed">
                         <div class="wrapper">
@@ -146,6 +153,8 @@ class Main extends Component{
                                 <Route path="/add_location_global" component={() => <AddLocationGlobal clickit={(loc) => this.pusher(loc)} />} />
                                 <Route path="/location_custom_map/:mapid" component={LocationCustomMapWithIdMid} />
                                 <Route path="/custom_maps" component={() => <DisplayCustomMaps clickit={(loc) => this.pusher(loc)} />} />
+                                <Route path="/view_patients" component={()=><ViewPatients clickit={(loc) => this.pusher(loc)}></ViewPatients>}></Route>
+                                <Route path='/patient/:id' component={PatientWithId}></Route>
                                 <Route path="/map_with_id/:mapid" component={ViewCustomMapWithIdMid} />
                                 <Redirect to="/dashboard" />
                             </Switch>
@@ -171,6 +180,7 @@ class Main extends Component{
                                     <Route path="/localdashboard" component={() => <LocalDashboard clickit={(loc) => this.pusher(loc)} />} />
                                     <Route path="/map" component={() => <ViewMap clickit={(loc) => this.pusher(loc)} />} />
                                     <Route path="/global_map" component={() => <GlobalMap clickit={(loc) => this.pusher(loc)} />} />
+                                    <Route path="/upload_report" component={()=><UploadReports clickit={(loc) => this.pusher(loc)}></UploadReports>}></Route>
                                     <Route path="/view_custom_map" component={() => <ViewCustomMaps clickit={(loc) => this.pusher(loc)} />} />
                                     <Route path="/create_alert" component={() => <CreateAlert clickit={(loc) => this.pusher(loc)} />} />
                                     <Route path="/map_with_id/:mapid" component={ViewCustomMapWithIdMid} />
