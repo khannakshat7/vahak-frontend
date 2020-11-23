@@ -125,6 +125,16 @@ class Dashboard extends Component{
                             </div>
                             <div class="col-lg-3 col-12">
                                 <div class="card" >
+                                <img class="card-img-top" src={imageUrl2} alt="Card image cap" />
+                                <div class="card-body">
+                                    <h5 class="card-title">View Medical Stores near me</h5>
+                                    <p class="card-text">View All Medical Stores near by</p>
+                                    <a href="https://www.google.co.in/maps/search/medical+store+near+me" style={{color: 'white',cursor:'pointer'}} class="btn btn-primary" target="_blank">View Med Stores</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-12">
+                                <div class="card" >
                                 <img class="card-img-top" src={imageUrl5} alt="Card image cap" />
                                 <div class="card-body">
                                     <h5 class="card-title">Add prescription</h5>
