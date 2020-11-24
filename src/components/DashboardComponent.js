@@ -8,6 +8,9 @@ import imageUrl4 from "../images/location.png";
 import imageUrl5 from "../images/sensor.jpg";
 import imageUrl6 from "../images/sensoradd.png";
 import imageUrl7 from "../images/useradd.png";
+import imageUrl8 from "../images/report1.jpg";
+import imageUrl9 from "../images/prescription1.png";
+import imageUrl10 from "../images/appointment.jpg";
 
 import { baseUrl } from '../baseUrl';
 
@@ -42,9 +45,9 @@ class Dashboard extends Component{
                                 <div class="card" >
                                 <img class="card-img-top" src={imageUrl2} alt="Card image cap" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Show Map</h5>
+                                    <h5 class="card-title">Show Patients</h5>
                                     <p class="card-text">View your added data points.</p>
-                                    <a onClick={() => {this.props.clickit('/map')}} style={{color: 'white',cursor:'pointer'}} class="btn btn-primary">View Map</a>
+                                    <a onClick={() => {this.props.clickit('/map')}} style={{color: 'white',cursor:'pointer'}} class="btn btn-primary">View Patients</a>
                                 </div>
                                 </div>
                             </div>
@@ -62,9 +65,9 @@ class Dashboard extends Component{
                                 <div class="card" >
                                 <img class="card-img-top" src={imageUrl4} alt="Card image cap" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Add Location</h5>
-                                    <p class="card-text">Add new data point.</p>
-                                    <a onClick={() => {this.props.clickit('/add_location')}} style={{color: 'white',cursor:'pointer'}} class="btn btn-primary">Add Location</a>
+                                    <h5 class="card-title">Add Patient</h5>
+                                    <p class="card-text">Add new data patient.</p>
+                                    <a onClick={() => {this.props.clickit('/add_location')}} style={{color: 'white',cursor:'pointer'}} class="btn btn-primary">Add Patients</a>
                                 </div>
                                 </div>
                             </div>
@@ -115,32 +118,32 @@ class Dashboard extends Component{
                         <div class="row">
                             <div class="col-lg-3 col-12">
                                 <div class="card" >
-                                <img class="card-img-top" src={imageUrl2} alt="Card image cap" />
+                                <img class="card-img-top" src={imageUrl8} alt="Card image cap" />
                                 <div class="card-body">
-                                    <h5 class="card-title">View Patients</h5>
-                                    <p class="card-text">View All Patients Here</p>
-                                    <a onClick={() => {this.props.clickit('/view_patients')}} style={{color: 'white',cursor:'pointer'}} class="btn btn-primary">View Patients</a>
+                                    <h5 class="card-title">View Reports</h5>
+                                    <p class="card-text">View All Patient's Reports Here</p>
+                                    <a onClick={() => {this.props.clickit('/view_patients')}} style={{color: 'white',cursor:'pointer'}} class="btn btn-primary">View Reports</a>
                                 </div>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-12">
                                 <div class="card" >
-                                <img class="card-img-top" src={imageUrl2} alt="Card image cap" />
-                                <div class="card-body">
-                                    <h5 class="card-title">View Medical Stores near me</h5>
-                                    <p class="card-text">View All Medical Stores near by</p>
-                                    <a href="https://www.google.co.in/maps/search/medical+store+near+me" style={{color: 'white',cursor:'pointer'}} class="btn btn-primary" target="_blank">View Med Stores</a>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-12">
-                                <div class="card" >
-                                <img class="card-img-top" src={imageUrl5} alt="Card image cap" />
+                                <img class="card-img-top" src={imageUrl9} alt="Card image cap" />
                                 <div class="card-body">
                                     <h5 class="card-title">Add prescription</h5>
                                     <p class="card-text">Give prescription for a patient</p>
                                     <a onClick={() => {this.props.clickit('/view_patients_prescription')}} style={{color: 'white',cursor:'pointer'}} class="btn btn-primary">Prescribe</a>
                                 </div>
+                                </div>
+                            </div> 
+                            <div class="col-lg-3 col-12">
+                                <div class="card" >
+                                    <img class="card-img-top" src={imageUrl10} alt="Card image cap" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">View Appointments</h5>
+                                        <p class="card-text">View all pending appointments</p>
+                                        <a onClick={() => {this.props.clickit('/view_appointment')}} style={{color: 'white',cursor:'pointer'}} class="btn btn-primary">View</a>
+                                    </div>
                                 </div>
                             </div>                           
                         </div>

@@ -76,6 +76,38 @@ class LocalHeader extends Component {
                   </a>
                 </li>
                 <li class="nav-item">
+                  <a onClick={() => {this.props.clickit('/upload_report')}} style={{color: 'white',cursor:'pointer'}} class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                      Upload Report
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a onClick={() => {this.props.clickit('/my_prescriptions')}} style={{color: 'white',cursor:'pointer'}} class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                      My Prescription
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a onClick={() => {this.props.clickit('/book_ambulance')}} style={{color: 'white',cursor:'pointer'}} class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                      Book Ambulance
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a onClick={() => {this.props.clickit('/make_appointment')}} style={{color: 'white',cursor:'pointer'}} class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                      Make Appointment
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
                   <a onClick={() => {this.props.clickit('/logout')}} style={{color: 'white',cursor:'pointer'}} class="nav-link">
                     <i class="nav-icon fas fa-th"></i>
                     <p>

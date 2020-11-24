@@ -22,11 +22,13 @@ import CreateSensor from './CreateSensorComponent';
 import AddSensor from './AddSensorComponent';
 import AddUser from './AddUserComponent';
 import DisplayCustomMaps from './DisplayCustomMapsComponent';
+import ViewAppointment from './ViewAppointmentComponent'
 
 // for local user :
 import LocalHeader from './LocalHeaderComponent';
 import LocalDashboard from './LocalDashboardComponent';
 import UploadReports from './UploadReports'
+import MakeAppointment from './MakeAppointmentComponent'
 
 // for non-login user
 import Welcome from './WelcomeComponent';
@@ -164,6 +166,7 @@ class Main extends Component{
                                 <Route path="/view_patients_prescription" component={()=><ViewPatientsPrescription clickit={(loc) => this.pusher(loc)}></ViewPatientsPrescription>}></Route>
                                 <Route path='/prescription/:id' component={PrescriptionWithId}></Route>
                                 <Route path="/map_with_id/:mapid" component={ViewCustomMapWithIdMid} />
+                                <Route path="/view_appointment" component={()=><ViewAppointment clickit={(loc) => this.pusher(loc)}></ViewAppointment>}></Route>
                                 <Redirect to="/dashboard" />
                             </Switch>
                             <Footer />
@@ -194,6 +197,7 @@ class Main extends Component{
                                     <Route path="/my_prescriptions" component={() => <MyPrescriptions clickit={(loc) => this.pusher(loc)} />} />
                                     <Route path="/book_ambulance" component={()=><BookAmbulance clickit={(loc)=>this.pusher(loc)}></BookAmbulance>}></Route>
                                     <Route path="/map_with_id/:mapid" component={ViewCustomMapWithIdMid} />
+                                    <Route path="/make_appointment" component={() => <MakeAppointment clickit={(loc) => this.pusher(loc)} />} />
                                     <Redirect to="/localdashboard" />
                                 </Switch>
                                 <Footer />

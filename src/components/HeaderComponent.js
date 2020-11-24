@@ -74,7 +74,7 @@ class Header extends Component {
                   <a onClick={() => {this.props.clickit('/map')}} style={{color: 'white',cursor:'pointer'}} class="nav-link">
                     <i class="nav-icon fas fa-th"></i>
                     <p>
-                      View Map
+                      View Patients
                     </p>
                   </a>
                 </li>
@@ -90,7 +90,7 @@ class Header extends Component {
                   <a onClick={() => {this.props.clickit('/add_location')}} style={{color: 'white',cursor:'pointer'}} class="nav-link">
                     <i class="nav-icon fas fa-th"></i>
                     <p>
-                      Add Location
+                      Add Patients
                     </p>
                   </a>
                 </li>
@@ -123,6 +123,30 @@ class Header extends Component {
                     <i class="nav-icon fas fa-th"></i>
                     <p>
                       Add Custom Map
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a onClick={() => {this.props.clickit('/view_patients')}} style={{color: 'white',cursor:'pointer'}} class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                      View Report
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a onClick={() => {this.props.clickit('/view_patients_prescription')}} style={{color: 'white',cursor:'pointer'}} class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                      Prescribe
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a onClick={() => {this.props.clickit('/view_appointment')}} style={{color: 'white',cursor:'pointer'}} class="nav-link">
+                    <i class="nav-icon fas fa-th"></i>
+                    <p>
+                      View Appointment
                     </p>
                   </a>
                 </li>
